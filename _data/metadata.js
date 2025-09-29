@@ -1,11 +1,12 @@
 export default {
-	title: "Eleventy Base Blog v9",
-	url: "https://example.com/",
-	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	title: "Блог SetHubble",
+	url: "https://blog.sethubble.ru/",
+	language: "ru",
+	description: "Новости, обновления и инсайты от команды SetHubble.",
+	currentYear: new Date().getFullYear(),
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
+		name: "SetHubble",
+		email: "i@inovok.ru",
+		url: "https://sethubble.ru/"
 	}
 }

@@ -1,10 +1,12 @@
 const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
-	// Копируем папки `css`, `img`, и `js` в итоговую папку `_site`
+	// Копируем нужные папки и файлы в итоговую сборку
 	eleventyConfig.addPassthroughCopy("css");
 	eleventyConfig.addPassthroughCopy("img");
 	eleventyConfig.addPassthroughCopy("js");
+	eleventyConfig.addPassthroughCopy("favicon.ico");
+	eleventyConfig.addPassthroughCopy("favicon.svg");
 
 	// --- Стандартные настройки из eleventy-base-blog (оставьте их) ---
 	eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
@@ -16,7 +18,6 @@ module.exports = function(eleventyConfig) {
 	});
 
 	eleventyConfig.addFilter("getWebmentionsForUrl", (webmentions, url) => {
-		// Это стандартная функция, ее можно оставить как есть
 		return []; 
 	});
 
@@ -25,9 +26,9 @@ module.exports = function(eleventyConfig) {
 		markdownTemplateEngine: "njk",
 		htmlTemplateEngine: "njk",
 		dir: {
-			input: "content",
-			includes: "../_includes",
-			data: "../_data",
+			input: ".", // <--- ГЛАВНОЕ ИСПРАВЛЕНИЕ
+			includes: "_includes",
+			data: "_data",
 			output: "_site"
 		}
 	};

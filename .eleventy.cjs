@@ -2,7 +2,7 @@ const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
 	// Копируем папки `css`, `img`, и `js` в итоговую папку `_site`
-	eleventyConfig.addPassthroughCopy("css");
+	//eleventyConfig.addPassthroughCopy("css");
 	eleventyConfig.addPassthroughCopy("img");
 	eleventyConfig.addPassthroughCopy("js");
 

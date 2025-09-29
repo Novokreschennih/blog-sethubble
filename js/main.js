@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // --- WOW Effects (Aurora, Scroll Animation) ---
     document.body.addEventListener('mousemove', e => {
         const { clientX, clientY } = e;
         const x = Math.round((clientX / window.innerWidth) * 100);
